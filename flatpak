@@ -1,0 +1,21 @@
+# list installed apps
+flatpak list --app
+
+# list apps and environments
+flatpak list
+
+# update
+flatpak update
+
+# installation
+flatpak search $APPNAME
+flatpak install org.foo.something
+
+# running
+flatpak run org.foo.something
+
+# cleanup
+flatpak uninstall --unused
+flatpak repair
+
+https://docs.flatpak.org/en/latest/using-flatpak.html

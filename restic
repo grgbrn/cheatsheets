@@ -1,0 +1,17 @@
+# important environment variables
+RESTIC_REPOSITORY
+RESTIC_PASSWORD
+
+# list snapshots
+restic snapshots
+
+# show snapshot diffs
+restic diff $SNAP1 $SNAP2
+
+# removing snapshots
+restic forget $SNAPSHOT-ID
+restic check
+restic prune
+
+# mount a snapshot
+restic -r /srv/restic-repo mount $MOUNTPOINT

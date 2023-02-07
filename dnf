@@ -1,0 +1,22 @@
+---
+tags: [ packaging ]
+---
+
+# show available upgrades
+dnf upif --list
+
+# actually perform upgrades
+dnf up
+
+# info about installed & available packages
+dnf info $PACKAGE
+
+# find which files a package installs
+rpm -ql $PACKAGE
+
+# To find which package provides an executable:
+dnf provides <executable>
+
+# history of installed packages (neat!)
+dnf history list $PACKAGE
+
