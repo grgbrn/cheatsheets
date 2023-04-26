@@ -1,0 +1,5 @@
+# list all services
+avahi-browse -a -t
+
+# look for ssh services
+avahi-browse -d local _ssh._tcp --resolve -t
