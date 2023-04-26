@@ -1,0 +1,23 @@
+# new app
+heroku create
+git push heroku main
+heroku open
+
+# monitoring
+heroku ps
+heroku logs --tail
+
+# scaling
+heroku ps:scale web=N
+
+# local development
+go build -o bin/go-getting-started -v .
+heroku local web
+
+# config
+heroku config
+heroku config:set VAR=10
+
+# postgresql
+heroku pg
+heroku pg:psql
