@@ -1,9 +1,12 @@
-# general
-asdf list all nodejs
-asdf install nodejs 16.14.2
+# versions
+asdf list nodejs             # installed versions
+asdf list all nodejs	     # available versions
 
+# install
+asdf install nodejs 16.14.2
 asdf install golang latest
 
 # version selection
 asdf global python 3.8.1
 asdf local python 3.7.5
+
