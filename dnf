@@ -4,6 +4,7 @@ tags: [ packaging ]
 
 # show available upgrades
 dnf upif --list
+dnf check-update 
 
 # actually perform upgrades
 dnf up
