@@ -24,3 +24,6 @@ dnf provides <executable>
 # history of installed packages (neat!)
 dnf history list $PACKAGE
 
+# don't update cache (slow network)
+dnf -C ...
+

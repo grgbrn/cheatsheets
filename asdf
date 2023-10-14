@@ -2,6 +2,10 @@
 asdf list golang	# installed versions
 asdf list all nodejs	# available versions
 
+# versions
+asdf list nodejs             # installed versions
+asdf list all nodejs	     # available versions
+
 # install
 asdf install nodejs 16.14.2
 asdf install golang latest
