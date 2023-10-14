@@ -12,6 +12,9 @@ dnf up
 # info about installed & available packages
 dnf info $PACKAGE
 
+# list installed packages
+dnf list installed
+
 # find which files a package installs
 rpm -ql $PACKAGE
 
