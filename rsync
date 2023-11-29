@@ -1,0 +1,52 @@
+# To copy files from remote to local, maintaining file properties and sym-links
+# (-a), zipping for faster transfer (-z), verbose (-v):
+rsync -avz host:file1 :file1 /dest/
+rsync -avz /source host:/dest
+
+# To copy files using checksum (-c) rather than time to detect if the file has
+# changed. (Useful for validating backups):
+rsync -avc <src> <dest>
+
+# To copy contents of /src/foo to destination:
+# This command will create /dest/foo if it does not already exist
+rsync -auv <src> <dest>
+
+# To explicitly copy <src> to <dest>
+rsync -auv <src> <dest>
+
+# To copy file from local to remote over ssh with non standard port 1234 to
+# destination folder in remoteuser's home directory:
+rsync -avz -e "ssh -p1234" <source> <username>@<host>:<dest>
+
+# rsync --itemize-changes
+YXcstpoguax  path/to/file
+|||||||||||
+||||||||||╰- x: The extended attribute information changed
+|||||||||╰-- a: The ACL information changed
+||||||||╰--- u: The u slot is reserved for future use
+|||||||╰---- g: Group is different
+||||||╰----- o: Owner is different
+|||||╰------ p: Permission are different
+||||╰------- t: Modification time is different
+|||╰-------- s: Size is different
+||╰--------- c: Different checksum (for regular files), or
+||              changed value (for symlinks, devices, and special files)
+|╰---------- the file type:
+|            f: for a file,
+|            d: for a directory,
+|            L: for a symlink,
+|            D: for a device,
+|            S: for a special file (e.g. named sockets and fifos)
+╰----------- the type of update being done::
+             <: file is being transferred to the remote host (sent)
+             >: file is being transferred to the local host (received)
+             c: local change/creation for the item, such as:
+                - the creation of a directory
+                - the changing of a symlink,
+                - etc.
+             h: the item is a hard link to another item (requires 
+                --hard-links).
+             .: the item is not being updated (though it might have
+                attributes that are being modified)
+             *: means that the rest of the itemized-output area contains
+                a message (e.g. "deleting")
