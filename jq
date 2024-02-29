@@ -15,5 +15,8 @@ jq '.[-2:]'
 # extract specific fields from an array
 jq 'map({id: .id, created_at:.created_at})'
 
+# extract specific fields and output CSV
+jq -r ' map([.dateTime, .value.value, .value.error] | join(", ")) | join("\n")' $JSONFILE
+
 # filter fields by key name
 jq 'with_entries(select(.key|startswith("auth")))'
