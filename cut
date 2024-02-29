@@ -1,0 +1,5 @@
+# To cut out the third field of text or stdoutput that is delimited by a #:
+cut -d# -f3
+
+# extract characters at offset 50-60
+cut -c50-60
