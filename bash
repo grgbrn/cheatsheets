@@ -1,3 +1,7 @@
+# strict mode header
+set -euo pipefail
+IFS=$'\n\t'
+
 # open current commandline in $EDITOR
 C-x C-e
 
