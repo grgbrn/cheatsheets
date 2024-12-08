@@ -1,0 +1,8 @@
+# basics
+command palette: Ctrl-Shift-P
+quick select:    Ctrl-Shift-Space
+
+# splits
+horizontal: 	Ctrl-Shift-Alt-%
+vertical:   	Ctrl-Shift-Alt-"
+switch:		Ctrl-Shift-ArrowKey

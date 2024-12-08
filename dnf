@@ -21,6 +21,9 @@ rpm -ql $PACKAGE
 # To find which package provides an executable:
 dnf provides <executable>
 
+# Show a package's dependencies
+dnf repoquery --requires $PACKAGE 
+
 # history of installed packages (neat!)
 dnf history list $PACKAGE
 
